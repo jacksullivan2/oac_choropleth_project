@@ -1,1 +1,2 @@
-# oac_choropleth_project
+Programming project I was assigned during my Summer Internship at OAC. The project was to write a reusable script which outputs a UK choropleth map with boundaries existing around each UK Local Authority District. The outputted choropleth maps will be used by clients of OAC's to understand the geographic distribution of their policyholders. 
+The script is written to allow the user to choose the what the colour weighting is based of (value of policies per LAD or amount of policies per LAD).
