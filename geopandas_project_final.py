@@ -128,7 +128,7 @@ def choropleth(data_filepath, excel_sheet_name, fname, client_data_postcode_colu
 
     # Plot the choropleth map inside the figure
     if weighted_column_type == 'MV':
-        legend_title = "Policy Value per Local Authority District"
+        legend_title = "Policy Value per Local Authority District (£)"
     if weighted_column_type == 'PC':
         legend_title = "Number of Policies per Local Authority District"
     
@@ -152,14 +152,14 @@ def choropleth(data_filepath, excel_sheet_name, fname, client_data_postcode_colu
 data_filepath = "postcode_sample_filev2.csv"
 excel_sheet_name = '2019 risk'
 data_filepath_1 = "Caravan Data.xlsx"
-fname = "choropleth_map_sample_data_PC.png"
+fname = "choropleth_map_sample_data_MV.png"
 client_data_postcode_column_header = "Postcode"
 postcode_lad_filepath = "postcode_to_lad"
 shapefile_filepath = "Local_Authority_Districts_(May_2021)_UK_BUC\Local_Authority_Districts_(May_2021)_UK_BUC.shp"
-weighted_column='PolicyCount'
+weighted_column='SumAssured'
 # If the weighted column is a market value, enter 'MV' for the following variable. 
 # or if the weighted column is based on policy count type 'PC' 
-weighted_column_type = 'PC'
+weighted_column_type = 'MV'
 
 
 choropleth(data_filepath, excel_sheet_name, fname, client_data_postcode_column_header, postcode_lad_filepath, shapefile_filepath, weighted_column, weighted_column_type)
